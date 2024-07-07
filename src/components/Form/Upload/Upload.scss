@@ -1,0 +1,52 @@
+@import "Upload.variables.css";
+
+.upload {
+    display: flex;
+    align-items: center;
+
+    min-width: var(--upload-min-width);
+
+    .file-upload {
+        display: inline-block; /* taking into account button padding */
+        cursor: pointer;
+
+        padding: var(--upload-padding);
+
+        transition: background-color 0.2s ease;
+        background-color: var(--light-grey-color);
+        color: var(--black-color);
+
+        border: var(--upload-border-width) solid var(--upload-button-border-color);
+        border-top-left-radius: var(--upload-border-radius);
+        border-bottom-left-radius: var(--upload-border-radius);
+
+        input[type="file"] {
+            display: none;
+        }
+
+        &:hover {
+            background-color: var(--light-dark-grey-color);
+        }
+    }
+
+    p {
+        width: 100%;
+
+        /* Limits the length of uploaded file names to the width of the field */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        color: var(--upload-placeholder-color);
+        padding: var(--upload-padding);
+
+        border: var(--upload-border-width) solid var(--upload-placeholder-color);
+        border-top-right-radius: var(--upload-border-radius);
+        border-bottom-right-radius: var(--upload-border-radius);
+        border-left: none; // So that the two borders do not overlap
+
+        &.uploaded {
+            color: var(--black-color);
+        }
+    }
+}

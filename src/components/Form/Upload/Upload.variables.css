@@ -1,0 +1,15 @@
+:root {
+    --upload-min-width: 328px; /* taken from figma */
+    --upload-padding: 10px 12px;
+    --upload-border-radius: 4px;
+    --upload-border-width: 1px;
+    --upload-button-border-color: var(--black-color);
+    --upload-placeholder-color: #7E7E7E;
+}
+
+/* Upload variables when it is inside an error controller and the controller has an error */
+.has-error {
+    --upload-border-width: 2px;
+    --upload-placeholder-color: var(--red-color);
+    --upload-button-border-color: var(--red-color);
+}

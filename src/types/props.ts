@@ -56,3 +56,13 @@ export interface ErrorControllerProps {
     children: React.ReactNode;
     error?: string;
 }
+
+/**
+ * Form/Button/Button.tsx
+ * Component for uploading a file
+ */
+export interface UploadProps {
+    placeholder: string;
+    buttonText: string;
+    accept?: string;
+}
