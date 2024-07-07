@@ -66,3 +66,12 @@ export interface UploadProps {
     buttonText: string;
     accept?: string;
 }
+
+/**
+ * Form/InputText/InputText.tsx
+ *
+ */
+export interface InputTextProps {
+    label: string;
+    helperText?: string;
+}

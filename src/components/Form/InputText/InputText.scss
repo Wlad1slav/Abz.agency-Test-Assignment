@@ -1,0 +1,37 @@
+@import "InputText.variables.css";
+
+.input-text {
+  position: relative;
+
+  input {
+    padding: var(--input-text-padding);
+    border-radius: var(--input-text-border-radius);
+    border: var(--input-text-border-width) solid var(--input-text-background);
+    min-width: var(--input-text-width);
+    font-size: var(--font-size-base);
+    font-family: var(--font-family-normal);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    margin-left: var(--input-text-label-margin);
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--light-grey-color);
+    padding-inline: var(--input-text-label-padding);
+    transition: top 0.2s ease, font-size 0.2s ease;
+    color: var(--input-text-background);
+  }
+
+  &.focused {
+    label {
+      top: 0;
+      font-size: var(--input-text-label-margin);
+    }
+  }
+}

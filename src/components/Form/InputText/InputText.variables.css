@@ -1,0 +1,9 @@
+:root {
+    --input-text-padding: 10px 12px;
+    --input-text-border-radius: 4px;
+    --input-text-label-margin: 12px;
+    --input-text-label-padding: 2px;
+    --input-text-width: 328px;
+    --input-text-background: #7E7E7E;
+    --input-text-border-width: 1px;
+}
