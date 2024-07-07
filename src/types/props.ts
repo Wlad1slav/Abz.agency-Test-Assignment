@@ -47,3 +47,12 @@ export interface ButtonProps {
     onClick?: () => void;
     type?: ButtonOptions;
 }
+
+/**
+ * Form/ErrorController/ErrorController.tsx
+ * Error output component
+ */
+export interface ErrorControllerProps {
+    children: React.ReactNode;
+    error?: string;
+}
