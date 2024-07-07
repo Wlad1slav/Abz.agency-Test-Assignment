@@ -1,0 +1,11 @@
+.font {
+  font-family: var(--font-family-normal);
+  letter-spacing: var(--letter-spacing);
+
+  &.normal {
+    * { font-weight: var(--font-weight-regular); }
+  }
+  &.bold {
+    * { font-weight: var(--font-weight-bold); }
+  }
+}

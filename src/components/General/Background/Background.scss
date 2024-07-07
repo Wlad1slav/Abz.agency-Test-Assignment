@@ -1,0 +1,16 @@
+.bg {
+  &.primary {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+  }
+
+  &.secondary {
+    background-color: var(--secondary-color);
+    color: var(--secondary-color-contrast);
+  }
+
+  &.light-grey {
+    background-color: var(--light-grey-color);
+    color: var(--light-color-contrast);
+  }
+}
