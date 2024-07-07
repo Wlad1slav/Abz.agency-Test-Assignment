@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* element's overall width and height include padding and frame width */
+}
+
+html {
+    /* Smooth scroll down with a fixed header */
+    scroll-padding-top: 100px; /* todo: replace with header height */
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+}

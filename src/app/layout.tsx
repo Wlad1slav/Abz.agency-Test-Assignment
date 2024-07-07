@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import '@/stylesheet/app.css';
+import '@/stylesheet/app.variables.css';
 
 export const metadata: Metadata = {
   title: "Abz.agency Test Assigment",

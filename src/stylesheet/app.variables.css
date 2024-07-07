@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Colors */
+:root {
+    /* Neutral Colors */
+    --black-color: #000000;
+
+    /* Primary Colors */
+    --primary-color: #F4E041;
+    --primary-color-rgb: rgb(244, 224, 65);
+    --primary-dark-color: #d0bf38; /* dark primary color that can be used for focus */
+    --primary-light-color: #FFE302; /* light primary color that can be used for hover */
+    --primary-color-contrast: var(--black-color); /* color that wont merge with the primary colored background */
+
+    /* Secondary Colors */
+    --secondary-color: #00BDD3;
+    --secondary-color-rgb: rgb(0, 189, 211);
+    --secondary-dark-color: #0395a6; /* dark secondary color that can be used for focus */
+    --secondary-light-color: #05d5ee; /* light secondary color that can be used for hover */
+    --secondary-color-contrast: var(--black-color); /* color that wont merge with the secondary colored background */
+
+    /* Light grey */
+    --light-grey-color: #F8F8F8;
+    --light-grey-color-rgb: rgb(248, 248, 248);
+    --light-dark-grey-color: #eeeeee;
+    --light-light-grey-color: #ffffff;
+    --light-color-contrast: var(--black-color);
+
+    /* Grey */
+    --grey-color: #B4B4B4;
+    --grey-color-contrast: var(--light-grey-color);
+}
+
+/* Typography */
+:root {
+    /* Font Families */
+    --font-family-normal: 'Nunito', Helvetica, Arial, sans-serif;
+
+    /* Font Sizes */
+    /* Paragraph */
+    --font-size-base: 16px;
+    --line-height-base: 26px;
+    --text-color-base: var(--black-color);
+
+    /* Heading */
+    --font-size-h1: 40px;
+    --line-height-h1: 40px;
+
+    /* Text weight */
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+
+    /* Other */
+    --letter-spacing: 0px;
+}
