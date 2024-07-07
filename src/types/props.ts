@@ -35,3 +35,15 @@ export interface BackgroundProps {
     children: React.ReactNode;
     color: ColorsOptions;
 }
+
+/**
+ * Form/Button/Button.tsx
+ * Button component
+ */
+export interface ButtonProps {
+    children: React.ReactNode;
+    color?: ColorsOptions;
+    disabled?: boolean;
+    onClick?: () => void;
+    type?: ButtonOptions;
+}

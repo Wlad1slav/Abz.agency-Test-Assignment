@@ -1,0 +1,9 @@
+:root {
+    --btn-border-radius: 100px;
+    --btn-min-width: 100px;
+    --btn-min-height: 34px;
+    --btn-border: none;
+    --btn-font-size: var(--font-size-base);
+    --btn-disabled-background: var(--grey-color);
+    --btn-disabled-color: var(--grey-color-contrast);
+}

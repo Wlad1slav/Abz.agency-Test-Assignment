@@ -1,0 +1,66 @@
+@import "Button.variables.css";
+
+/* The color of one particular button effect */
+@mixin button-color($background, $color) {
+  background-color: $background;
+  color: $color;
+}
+
+/* A mixin that creates all the necessary effects for each button color */
+@mixin button-layout(
+  $background, $background-hover, $background-focus,
+  $color, $color-hover, $color-focus,
+) {
+  @include button-color($background, $color);
+
+  &:hover {
+    @include button-color($background-hover, $color-hover);
+
+    &:disabled {
+      @include button-color(var(--btn-disabled-background), var(--btn-disabled-color));
+    }
+  }
+
+  &:focus {
+    @include button-color($background-focus, $color-focus);
+  }
+
+  &:disabled {
+    @include button-color(var(--btn-disabled-background), var(--btn-disabled-color));
+  }
+}
+
+.btn {
+  border-radius: var(--btn-border-radius);
+  min-width: var(--btn-min-width);
+  min-height: var(--btn-min-height);
+  border: var(--btn-border);
+  font-size: var(--btn-font-size);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    cursor: unset;
+  }
+
+  &.primary {
+    @include button-layout(
+        var(--primary-color), var(--primary-light-color), var(--primary-dark-color),
+        var(--primary-color-contrast), var(--primary-color-contrast), var(--primary-color-contrast)
+    );
+  }
+
+  &.secondary {
+    @include button-layout(
+        var(--secondary-color), var(--secondary-light-color), var(--secondary-dark-color),
+        var(--secondary-color-contrast), var(--secondary-color-contrast), var(--secondary-color-contrast)
+    );
+  }
+
+  &.light-grey {
+    @include button-layout(
+        var(--light-grey-color), var(--light-light-grey-color), var(--light-dark-grey-color),
+        var(--light-color-contrast), var(--light-color-contrast), var(--light-color-contrast)
+    );
+  }
+}
