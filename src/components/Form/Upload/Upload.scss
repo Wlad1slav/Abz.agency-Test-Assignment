@@ -32,11 +32,6 @@
     p {
         width: 100%;
 
-        /* Limits the length of uploaded file names to the width of the field */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
         color: var(--upload-placeholder-color);
         padding: var(--upload-padding);
 

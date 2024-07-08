@@ -1,5 +1,11 @@
-p.text-normal {
+p {
   font-size: var(--font-size-base);
-  /*line-height: var(--line-height-base);*/
-  /*color: var(--text-color-base);*/
+  &.normal {}
+
+  &.ellipsis {
+    /* Limits the length of uploaded file names to the width of the field */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

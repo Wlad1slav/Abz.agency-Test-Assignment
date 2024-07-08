@@ -2,8 +2,8 @@
 
 import {useState} from "react";
 import {UploadProps} from "@/types/props";
-import './Upload.scss';
 import Text from "@/components/General/Typography/Text/Text";
+import './Upload.scss';
 
 function Upload({buttonText, placeholder, accept, ...props}: UploadProps) {
 
@@ -22,8 +22,8 @@ function Upload({buttonText, placeholder, accept, ...props}: UploadProps) {
                 {buttonText}
             </label>
             {
-                uploadedFiles.length > 0 ? <Text className="uploaded">{uploadedFiles.join(', ')}</Text>
-                    : <Text>{placeholder}</Text>
+                uploadedFiles.length > 0 ? <Text type="ellipsis" className="uploaded">{uploadedFiles.join(', ')}</Text>
+                    : <Text type="ellipsis">{placeholder}</Text>
             }
         </div>
     );

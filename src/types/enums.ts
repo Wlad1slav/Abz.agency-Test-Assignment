@@ -12,10 +12,15 @@ export type FontWeightOptions = 'normal' | 'bold';
 // Possible button types
 export type ButtonOptions = 'button' | 'submit' | 'reset';
 
-// Image options
+// Possible image types
 export type ImageProps =
     | ({ type: 'normal' } & BasicImage) // Default image with alt & src
     | ({ type: 'responsive' } & ResponsiveImage) // Adaptive image with props to adapt to different resolutions
     | ({ type: 'thumbnail' } & ThumbnailImage) // Miniature image
     | ({ type: 'background' } & BackgroundImage) // A container with a specific background
     | ({ type: 'lazy' } & LazyLoadImage) // Delayed loading image
+
+// Possible text types
+export type TextOptions =
+    | 'normal'
+    | 'ellipsis' // If the text is longer than its width or the width of its parent, it is truncated

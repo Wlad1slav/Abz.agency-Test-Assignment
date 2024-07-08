@@ -1,5 +1,5 @@
 import React from "react";
-import {ButtonOptions, ColorsOptions, FontWeightOptions, HeadingOptions} from "@/types/enums";
+import {ButtonOptions, ColorsOptions, FontWeightOptions, HeadingOptions, TextOptions} from "@/types/enums";
 
 /**
  * General/Typography/Font/Font.tsx
@@ -25,6 +25,8 @@ export interface HeadingProps {
  */
 export interface TextProps {
     children: React.ReactNode;
+    className?: string;
+    type?: TextOptions;
 }
 
 /**
