@@ -1,0 +1,24 @@
+.tooltip-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+
+  .tooltip {
+    position: fixed;
+    background-color: var(--black-color);
+    color: white;
+    padding: 3px 16px;
+    border-radius: 4px;
+    z-index: 1000; // raise the tooltip in the hierarchy
+    white-space: nowrap;
+    pointer-events: none; // ensures that the tooltip will not interfere with the cursor
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+    }
+  }
+}

@@ -81,6 +81,16 @@ export interface LazyLoadImage {
     loading: 'lazy' | 'eager';
     placeholderSrc?: string;
 }
+
+/**
+ * General/Tooltip/Tooltip.tsx
+ * Component to display a tooltip when hovering over the component
+ */
+export interface TooltipProps {
+    text: string;
+    children: React.ReactNode;
+}
+
 /**
  * Form/Button/Button.tsx
  * Button component
