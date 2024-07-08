@@ -37,6 +37,49 @@ export interface BackgroundProps {
 }
 
 /**
+ * General/Image/Image.tsx
+ * Different types of images
+ */
+
+// Standard image
+export interface BasicImage {
+    src: string;
+    alt: string;
+}
+
+// A responsive image, in which you can set images for different resolutions and different sizes for different resolutions
+export interface ResponsiveImage {
+    src: string;
+    alt: string;
+    srcSet?: string; // List of URLs for different sizes
+    sizes?: string; // List of image sizes for different screens
+}
+
+// A thumbnail image that you can adjust the height and width of
+export interface ThumbnailImage {
+    src: string;
+    alt: string;
+    width?: number;
+    height?: number;
+}
+
+// A container with a specific image as a background
+export interface BackgroundImage {
+    src: string;
+    alt: string;
+    position?: string;
+    size?: string;
+    children: React.ReactNode;
+}
+
+// Delayed loading image
+export interface LazyLoadImage {
+    src: string;
+    alt: string;
+    loading: 'lazy' | 'eager';
+    placeholderSrc?: string;
+}
+/**
  * Form/Button/Button.tsx
  * Button component
  */
