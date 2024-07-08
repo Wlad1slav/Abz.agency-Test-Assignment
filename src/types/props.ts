@@ -132,6 +132,21 @@ export interface InputTextProps {
 }
 
 /**
+ * Form/RadioBox/RadioBox.tsx
+ */
+export interface RadioBoxProps {
+    name: string;
+    labels: string[];
+}
+
+export interface RadioButtonProps {
+    label: string;
+    checked: boolean;
+    name: string;
+    onChange: (label: string) => void;
+}
+
+/**
  * Cards/Cards.tsx
  * Information containers
  */
