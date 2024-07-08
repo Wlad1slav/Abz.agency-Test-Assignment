@@ -1,0 +1,13 @@
+@import "Header.variables.css";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--header-padding);
+  background-color: var(--header-background);
+
+  .buttons {
+    display: flex;
+    gap: var(--header-space-between-buttons);
+  }
+}
