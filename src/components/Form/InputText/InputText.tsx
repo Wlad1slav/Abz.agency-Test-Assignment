@@ -4,7 +4,7 @@ import {useState} from "react";
 import {InputTextProps} from "@/types/props";
 import './InputText.scss';
 
-function InputText({label, helperText}: InputTextProps) {
+function InputText({label}: InputTextProps) {
     const [isFocused, setIsFocused] = useState(false);
 
     const blur = (e) => {

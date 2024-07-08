@@ -1,0 +1,15 @@
+.has-error {
+  .error {
+    color: var(--red-color);
+  }
+}
+
+.helper-text {
+  color: #7E7E7E;
+}
+
+.has-error .error, .helper-text {
+  font-size: 12px;
+  padding-left: 12px;
+  text-align: left;
+}

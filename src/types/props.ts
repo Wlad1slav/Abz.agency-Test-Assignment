@@ -94,12 +94,13 @@ export interface ButtonProps {
 }
 
 /**
- * Form/ErrorController/ErrorController.tsx
- * Error output component
+ * Form/Field/Field.tsx
+ * A form field component
  */
-export interface ErrorControllerProps {
+export interface FieldProps {
     children: React.ReactNode;
     error?: string;
+    helperText?: string;
 }
 
 /**
@@ -114,9 +115,8 @@ export interface UploadProps {
 
 /**
  * Form/InputText/InputText.tsx
- *
+ * Text input field
  */
 export interface InputTextProps {
     label: string;
-    helperText?: string;
 }
