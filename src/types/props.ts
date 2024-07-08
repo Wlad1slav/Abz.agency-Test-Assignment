@@ -120,3 +120,17 @@ export interface UploadProps {
 export interface InputTextProps {
     label: string;
 }
+
+/**
+ * Cards/Cards.tsx
+ * Information containers
+ */
+export interface CardProps {
+    title: string;
+    content: string[];
+    imgUrl: string;
+}
+
+export interface CardsProps {
+    cards: Array<CardProps>;
+}

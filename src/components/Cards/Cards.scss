@@ -1,0 +1,22 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--cards-space-between-elements);
+
+  .card {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--cards-space-between-elements);
+    padding: var(--cards-space-between-elements);
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    background-color: white;
+
+    img {
+      border-radius: 100%;
+    }
+  }
+}
