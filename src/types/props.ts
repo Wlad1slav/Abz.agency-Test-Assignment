@@ -140,6 +140,8 @@ export interface InputTextProps {
 export interface RadioBoxProps {
     name: string;
     labels: string[];
+    mainLabel: string;
+    internalLabels: string[];
 }
 
 export interface RadioButtonProps {

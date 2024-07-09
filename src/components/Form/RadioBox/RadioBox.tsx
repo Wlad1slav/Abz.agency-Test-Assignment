@@ -3,6 +3,11 @@
 import { useState } from 'react';
 import {RadioBoxProps, RadioButtonProps} from "@/types/props";
 import './RadioBox.scss';
+import Heading from "@/components/General/Typography/Heading/Heading";
+
+export function RadioBoxValid(obj: any): obj is RadioBoxProps {
+    return 'name' in obj && 'internalLabels' in obj && 'mainLabel' in obj;
+}
 
 function RadioButton({ label, checked, name, onChange }: RadioButtonProps) {
     return (
@@ -18,7 +23,7 @@ function RadioButton({ label, checked, name, onChange }: RadioButtonProps) {
     );
 }
 
-function RadioBox({ name, labels }: RadioBoxProps) {
+function RadioBox({ name, internalLabels, mainLabel }: RadioBoxProps) {
     // The state in which the selected radio label is stored
     const [selectedLabel, setSelectedLabel] = useState<string>('');
 
@@ -28,17 +33,20 @@ function RadioBox({ name, labels }: RadioBoxProps) {
 
     return (
         <div className="radio-box">
-            {
-                labels.map(label => (
-                    <RadioButton
-                        key={label}
-                        label={label}
-                        checked={selectedLabel === label} // If the label of the selected radio is equal to this label, it is checked
-                        name={name}
-                        onChange={handleRadioChange}
-                    />
-                ))
-            }
+            <Heading option="h3">{mainLabel}</Heading>
+            <div>
+                {
+                    internalLabels.map(label => (
+                        <RadioButton
+                            key={label}
+                            label={label}
+                            checked={selectedLabel === label} // If the label of the selected radio is equal to this label, it is checked
+                            name={name}
+                            onChange={handleRadioChange}
+                        />
+                    ))
+                }
+            </div>
         </div>
     );
 }
