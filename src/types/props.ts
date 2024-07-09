@@ -1,6 +1,14 @@
 import React from "react";
 import {ButtonOptions, ColorsOptions, FontWeightOptions, HeadingOptions, TextOptions} from "@/types/enums";
+import React, {ChangeEvent} from "react";
+import {
+    ButtonOptions,
+    ColorsOptions,
+    FontWeightOptions,
+    HeadingOptions,
     InputTextType,
+    TextOptions
+} from "@/types/enums";
 
 /**
  * General/Typography/Font/Font.tsx
@@ -159,13 +167,18 @@ export interface RadioBoxProps {
     labels: string[];
     mainLabel: string;
     internalLabels: string[];
+    internalLabels: Array<RadioButtonProps>;
+    onChangeStore?: (label: string) => void;
+    error?: string;
 }
 
 export interface RadioButtonProps {
     label: string;
     checked: boolean;
+    value?: string;
+    checked?: boolean;
     name: string;
-    onChange: (label: string) => void;
+    onChange?: (label: string) => void;
 }
 
 /**
