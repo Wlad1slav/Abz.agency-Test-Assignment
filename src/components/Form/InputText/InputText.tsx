@@ -35,6 +35,8 @@ function InputText({ label, name, type, onChange, max, min, error }: InputTextPr
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     const blur = (e) => {
+        // When the user blurs the field, it is checked whether he has left any text in it.
+        // If not left, the focus is removed from the field.
         if (e.target.value.length === 0) {
             setIsFocused(false);
         }
@@ -51,6 +53,8 @@ function InputText({ label, name, type, onChange, max, min, error }: InputTextPr
     }
 
     useEffect(() => {
+        // Track input field value changes
+        // Needed to set focus when autofilling fields
         const inputElement = inputRef.current;
         if (inputElement) {
             const handleAutoFill = () => {
@@ -61,6 +65,8 @@ function InputText({ label, name, type, onChange, max, min, error }: InputTextPr
                 }
             };
             handleAutoFill();
+
+            // Input event handler that ensures correct tracking of changes even with autofill
             inputElement.addEventListener('input', handleAutoFill);
         }
     }, []);
