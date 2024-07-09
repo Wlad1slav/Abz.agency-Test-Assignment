@@ -145,6 +145,10 @@ export interface InputTextProps {
     label: string;
     name: string;
     type: InputTextType;
+    max?: number;
+    min?: number;
+    error?: string;
+    onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**
