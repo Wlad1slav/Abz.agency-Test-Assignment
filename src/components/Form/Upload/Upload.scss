@@ -38,6 +38,8 @@
         border-bottom-right-radius: var(--upload-border-radius);
         border-left: none; // So that the two borders do not overlap
 
+        text-align: left;
+
         &.uploaded {
             color: var(--black-color);
         }

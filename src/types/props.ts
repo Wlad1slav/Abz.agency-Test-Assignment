@@ -122,6 +122,17 @@ export interface UploadProps {
     placeholder: string;
     buttonText: string;
     accept?: string;
+    name: string;
+    accept?: string[];
+    minSize?: number; // size in megabytes
+    maxSize?: number;
+    resolution?: {
+        maxWidth?: number;
+        maxHeight?: number;
+        minWidth?: number;
+        minHeight?: number;
+    };
+    onInputStore?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 /**
