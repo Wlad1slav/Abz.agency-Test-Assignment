@@ -19,11 +19,13 @@ function Upload({
     minSize,
     maxSize,
     resolution,
+    error,
+    multiple=false,
     ...props
 }: UploadProps) {
 
     const [uploadedFiles, setUploadedFiles] = useState<Array<string>>([]);
-    const [validateError, setValidateError] = useState<string | null>(null);
+    const [validateError, setValidateError] = useState<string>();
 
     // Validation of the file
     // Validate how much the file weighs, if its img its resolution
@@ -89,10 +91,10 @@ function Upload({
     }
 
     return (
-        <Field error={validateError ?? ''}>
+        <Field error={`${validateError ?? ''} ${error ?? ''}`}>
             <div {...props} className="upload">
                 <label className="file-upload">
-                    <input type="file" name={name} onInput={storeUploaded} accept={accept?.join(',')} multiple />
+                    <input type="file" name={name} onInput={storeUploaded} accept={accept?.join(',')} multiple={multiple} />
                     {buttonText}
                 </label>
                 {

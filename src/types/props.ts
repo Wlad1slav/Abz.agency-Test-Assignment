@@ -133,6 +133,8 @@ export interface UploadProps {
         minHeight?: number;
     };
     onInputStore?: (e: ChangeEvent<HTMLInputElement>) => void;
+    multiple?: boolean;
+    error?: string;
 }
 
 /**

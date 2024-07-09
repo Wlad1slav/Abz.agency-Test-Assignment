@@ -1,14 +1,16 @@
-import {FieldProps} from "@/types/props";
+import { FieldProps } from "@/types/props";
 import './Field.scss';
 import Text from "@/components/General/Typography/Text/Text";
 
-function Field({children, error, helperText}: FieldProps) {
-    return (
-        <div className={error ? 'has-error' : 'no-error'}>
-            {children}
+function Field({ children, error, helperText }: FieldProps) {
+    // Checking for an error in the field
+    const hasError = error ? error?.replace(/\s+/g, '')?.length > 0 : false;
 
+    return (
+        <div className={hasError ? 'has-error' : 'no-error'}>
+            {children}
             {
-                error ? <Text className="error">{error}</Text>
+                hasError ? <Text className="error">{error}</Text>
                     : <Text className="helper-text">{helperText}</Text>
             }
         </div>
