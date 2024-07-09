@@ -1,5 +1,6 @@
 import React from "react";
 import {ButtonOptions, ColorsOptions, FontWeightOptions, HeadingOptions, TextOptions} from "@/types/enums";
+    InputTextType,
 
 /**
  * General/Typography/Font/Font.tsx
@@ -129,6 +130,8 @@ export interface UploadProps {
  */
 export interface InputTextProps {
     label: string;
+    name: string;
+    type: InputTextType;
 }
 
 /**

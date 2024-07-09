@@ -19,13 +19,15 @@
   label {
     position: absolute;
     left: 0;
-    margin-left: var(--input-text-label-margin);
     top: 50%;
     transform: translateY(-50%);
-    background: var(--light-grey-color);
+    margin-left: var(--input-text-label-margin);
     padding-inline: var(--input-text-label-padding);
-    transition: top 0.2s ease, font-size 0.2s ease;
+    background: var(--light-grey-color);
     color: var(--input-text-background);
+    border-radius: 100px; // To improve the appearance of field autofill, which often changes the background color
+    pointer-events: none; // makes the label unclickable
+    transition: top 0.2s ease, font-size 0.2s ease;
   }
 
   &.focused {

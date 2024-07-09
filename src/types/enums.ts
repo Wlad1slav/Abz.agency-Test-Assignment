@@ -24,3 +24,6 @@ export type ImageProps =
 export type TextOptions =
     | 'normal'
     | 'ellipsis' // If the text is longer than its width or the width of its parent, it is truncated
+
+// Input field type
+export type InputTextType = 'text' | 'email' | 'number' | 'tel';
