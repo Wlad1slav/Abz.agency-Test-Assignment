@@ -12,18 +12,18 @@ export function InputTextValid(obj: any): obj is InputTextProps {
 function validateInput(type, value, min, max) {
     let error = '';
     if (min && value.length < min) {
-        error = `Minimum length is ${min}`;
+        error = `Minimum length is ${min}.`;
     } else if (max && value.length > max) {
-        error = `Maximum length is ${max}`;
+        error = `Maximum length is ${max}.`;
     } else if (type === 'email') {
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailPattern.test(value)) {
-            error = 'Invalid email address';
+            error = 'Invalid email address.';
         }
     } else if (type === 'tel') {
         const phonePattern = /^\+380\d{9}$/;
         if (!phonePattern.test(value)) {
-            error = 'Phone number must start with +380 and have 9 digits after it';
+            error = 'Phone number must start with +380 and have 9 digits after it.';
         }
     }
     return error;
