@@ -1,5 +1,3 @@
-import React from "react";
-import {ButtonOptions, ColorsOptions, FontWeightOptions, HeadingOptions, TextOptions} from "@/types/enums";
 import React, {ChangeEvent} from "react";
 import {
     ButtonOptions,
@@ -129,7 +127,6 @@ export interface FieldProps {
 export interface UploadProps {
     placeholder: string;
     buttonText: string;
-    accept?: string;
     name: string;
     accept?: string[];
     minSize?: number; // size in megabytes
@@ -164,9 +161,7 @@ export interface InputTextProps {
  */
 export interface RadioBoxProps {
     name: string;
-    labels: string[];
     mainLabel: string;
-    internalLabels: string[];
     internalLabels: Array<RadioButtonProps>;
     onChangeStore?: (label: string) => void;
     error?: string;
@@ -174,11 +169,23 @@ export interface RadioBoxProps {
 
 export interface RadioButtonProps {
     label: string;
-    checked: boolean;
     value?: string;
     checked?: boolean;
     name: string;
     onChange?: (label: string) => void;
+}
+
+/**
+ * Form/FormPost/FormPost.tsx
+ * Form component with the post method
+ */
+export interface FormPostProps {
+    requestUrl: string;
+    heading: string;
+    successMessage: string;
+    successImg: string;
+    button: string;
+    fields: Array<InputTextProps | UploadProps | RadioBoxProps>;
 }
 
 /**
