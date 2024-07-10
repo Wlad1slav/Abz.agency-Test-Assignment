@@ -1,3 +1,4 @@
 :root {
-    --cards-space-between-elements: 20px;
+    --cards-space-between-elements: 29px;
+    --card-padding: 20px;
 }

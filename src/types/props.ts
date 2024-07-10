@@ -191,15 +191,16 @@ export interface FormPostProps {
 }
 
 /**
- * Cards/Cards.tsx
- * Information containers
+ * Cards/Card.tsx
+ * User model
  */
-export interface CardProps {
-    title: string;
-    content: string[];
-    imgUrl: string;
-}
-
-export interface CardsProps {
-    cards: Array<CardProps>;
+export interface UserModel {
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    position: string;
+    position_id: number;
+    registration_timestamp: number;
+    photo: string;
 }
