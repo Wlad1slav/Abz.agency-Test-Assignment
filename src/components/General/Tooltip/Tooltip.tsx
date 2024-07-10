@@ -17,7 +17,7 @@ const Tooltip: React.FC<TooltipProps> = ({ text, children }) => {
         // When hovering the mouse, the coordinates are set
         // slightly below and to the left of the cursor
         const x = event.clientX - 10;
-        const y = event.clientY + 15;
+        const y = event.clientY + 30;
 
         setPosition({ x, y });
         setVisible(true);
