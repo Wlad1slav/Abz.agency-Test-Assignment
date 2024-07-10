@@ -2,11 +2,40 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /* element's overall width and height include padding and frame width */
+    color: var(--black-color);
 }
 
 html {
     /* Smooth scroll down with a fixed header */
-    scroll-padding-top: 100px; /* todo: replace with header height */
+    scroll-padding-top: var(--header-height);
     overscroll-behavior: none;
     scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--font-family-normal);
+    letter-spacing: var(--letter-spacing);
+    background-color: var(--light-grey-color);
+}
+
+div.content {
+    width: var(--page-width);
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--page-space-between-sections);
+}
+
+a, a:hover, a:visited {
+    text-decoration: none;
 }

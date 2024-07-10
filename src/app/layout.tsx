@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Header from "@/components/Header/Header";
 import '@/stylesheet/app.css';
 import '@/stylesheet/app.variables.css';
+import '@/stylesheet/home.scss';
 
 export const metadata: Metadata = {
   title: "Abz.agency Test Assigment",
@@ -14,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="content">
+          <Header />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
