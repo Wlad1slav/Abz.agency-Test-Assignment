@@ -1,10 +1,22 @@
 @import "Header.variables.css";
 
 header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: space-between;
-  padding: var(--header-padding);
+  justify-content: center;
+  z-index: 10;
+  width: 100%;
   background-color: var(--header-background);
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: var(--page-width);
+    height: var(--header-height);
+  }
 
   .buttons {
     display: flex;

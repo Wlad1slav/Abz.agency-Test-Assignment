@@ -54,3 +54,9 @@
     /* Other */
     --letter-spacing: 0px;
 }
+
+/* Page */
+:root {
+    --page-width: 1170px;
+    --page-space-between-sections: 140px;
+}

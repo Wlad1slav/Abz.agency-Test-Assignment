@@ -5,10 +5,12 @@ import './Header.scss';
 function Header() {
     return (
         <header>
-            <Logo />
-            <div className="buttons">
-                <Button type="button">Users</Button>
-                <Button type="button">Sign up</Button>
+            <div>
+                <Logo />
+                <nav className="buttons">
+                    <Button type="button">Users</Button>
+                    <Button type="button">Sign up</Button>
+                </nav>
             </div>
         </header>
     );
