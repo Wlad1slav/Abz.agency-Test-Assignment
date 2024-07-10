@@ -15,7 +15,7 @@ import './FormPost.scss';
 function FormPost({requestUrl, fields, button, successMessage, successImg, heading}: FormPostProps) {
 
     // The state stores the given data
-    const [data, setData] = useState();
+    const [data, setData] = useState<{[key: string]: any}>({});  // Initialize as an empty object
 
     // The state store the given files
     const [files, setFiles] = useState<{[key: string]: File}>({});
@@ -64,8 +64,10 @@ function FormPost({requestUrl, fields, button, successMessage, successImg, headi
             const formData = new FormData();
 
             // Append text data
-            for (const key in data) {
-                formData.append(key, data[key]);
+            if (data) {
+                for (const key in data) {
+                    formData.append(key, data[key]);
+                }
             }
 
             // Append file data

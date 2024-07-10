@@ -68,8 +68,8 @@ export interface ResponsiveImage {
 export interface ThumbnailImage {
     src: string;
     alt: string;
-    width?: number;
-    height?: number;
+    width?: number | string;
+    height?: number | string;
 }
 
 // A container with a specific image as a background

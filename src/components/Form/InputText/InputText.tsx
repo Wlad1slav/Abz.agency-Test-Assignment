@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect, useRef } from "react";
+import {useState, useEffect, useRef, ChangeEvent} from "react";
 import { InputTextProps } from "@/types/props";
+import {InputTextType} from "@/types/enums";
 import Field from "@/components/Form/Field/Field";
 import './InputText.scss';
 
@@ -9,7 +10,7 @@ export function InputTextValid(obj: any): obj is InputTextProps {
     return 'label' in obj && 'name' in obj;
 }
 
-function validateInput(type, value, min, max) {
+function validateInput(type: InputTextType, value: string, min: number | undefined, max: number | undefined) {
     let error = '';
     if (min && value.length < min) {
         error = `Minimum length is ${min}.`;
@@ -34,7 +35,7 @@ function InputText({ label, name, type, onChange, max, min, error }: InputTextPr
     const [validateError, setValidateError] = useState<string>();
     const inputRef = useRef<HTMLInputElement | null>(null);
 
-    const blur = (e) => {
+    const blur = (e: ChangeEvent<HTMLInputElement>) => {
         // When the user blurs the field, it is checked whether he has left any text in it.
         // If not left, the focus is removed from the field.
         if (e.target.value.length === 0) {
@@ -44,7 +45,7 @@ function InputText({ label, name, type, onChange, max, min, error }: InputTextPr
         setValidateError(validationError);
     }
 
-    const handleChange = (e) => {
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         if (onChange) {
             onChange(e);
         }

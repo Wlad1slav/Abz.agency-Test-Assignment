@@ -1,7 +1,7 @@
 'use client'
 
-import {ChangeEvent, useState} from "react";
-import {UploadProps} from "@/types/props";
+import { ChangeEvent, useState } from "react";
+import { UploadProps } from "@/types/props";
 import Text from "@/components/General/Typography/Text/Text";
 import './Upload.scss';
 import Field from "@/components/Form/Field/Field";
@@ -46,16 +46,26 @@ function Upload({
             }
         }
 
-        // Check image resolution
+        // Image width and height validation
         if (resolution) {
             const img = new Image();
             img.onload = () => {
-                if (img.width < resolution.minWidth || resolution.minHeight < 70) {
-                    setValidateError(`Image resolution must be at least ${resolution.minWidth}x${resolution.minHeight} pixels.`);
+                // If the maximum or minimum field is specified for width or height,
+                // then it is checked whether the image is equal to it
+                if (resolution.minWidth && img.width < resolution.minWidth) {
+                    setValidateError(`Image width must be at least ${resolution.minWidth} pixels.`);
                     return false;
                 }
-                if (img.width > resolution.maxWidth || resolution.maxHeight > 70) {
-                    setValidateError(`Image resolution must be no more ${resolution.minWidth}x${resolution.minHeight} pixels.`);
+                if (resolution.minHeight && img.height < resolution.minHeight) {
+                    setValidateError(`Image height must be at least ${resolution.minHeight} pixels.`);
+                    return false;
+                }
+                if (resolution.maxWidth && img.width > resolution.maxWidth) {
+                    setValidateError(`Image width must be no more ${resolution.minWidth} pixels.`);
+                    return false;
+                }
+                if (resolution.maxHeight && img.height > resolution.maxHeight) {
+                    setValidateError(`Image height must be no more ${resolution.minHeight} pixels.`);
                     return false;
                 }
             };
@@ -67,13 +77,16 @@ function Upload({
         }
 
         // If the file passed all validation
-        setValidateError(null);
+        setValidateError(undefined);
         return true;
     }
 
     // Saving in the state uploadedFiles an array with the names of all uploaded files
     const storeUploaded = (e: ChangeEvent<HTMLInputElement>) => {
-        const files: FileList = e.target.files;
+        const files: FileList | null = e.target.files;
+        if (!files) {
+            return;
+        }
         const validFiles: string[] = [];
 
         for (const file of Array.from(files)) {
