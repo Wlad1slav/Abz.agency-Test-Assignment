@@ -30,7 +30,7 @@ function validateInput(type: InputTextType, value: string, min: number | undefin
     return error;
 }
 
-function InputText({ label, name, type, onChange, max, min, error }: InputTextProps) {
+function InputText({ label, name, type, onChange, max, min, error, helperText }: InputTextProps) {
     const [isFocused, setIsFocused] = useState(false);
     const [validateError, setValidateError] = useState<string>();
     const inputRef = useRef<HTMLInputElement | null>(null);
@@ -73,7 +73,7 @@ function InputText({ label, name, type, onChange, max, min, error }: InputTextPr
     }, []);
 
     return (
-        <Field error={`${validateError ?? ''} ${error ?? ''}`}>
+        <Field error={`${validateError ?? ''} ${error ?? ''}`} helperText={helperText ?? ''}>
             <div className={`input-text ${isFocused ? 'focused' : ''}`}>
                 <input
                     type={type}

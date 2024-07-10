@@ -33,12 +33,14 @@
         color: var(--upload-placeholder-color);
         padding: var(--upload-padding);
 
-        border: var(--upload-border-width) solid var(--upload-placeholder-color);
+        border: var(--upload-border-width) solid var(--upload-border-color);
         border-top-right-radius: var(--upload-border-radius);
         border-bottom-right-radius: var(--upload-border-radius);
         border-left: none; // So that the two borders do not overlap
 
         text-align: left;
+
+        line-height: unset;
 
         &.uploaded {
             color: var(--black-color);

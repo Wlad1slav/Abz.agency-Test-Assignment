@@ -7,12 +7,14 @@ function Field({ children, error, helperText }: FieldProps) {
     const hasError = error ? error?.replace(/\s+/g, '')?.length > 0 : false;
 
     return (
-        <div className={hasError ? 'has-error' : 'no-error'}>
+        <div className={`field ${hasError ? 'has-error' : 'no-error'}`}>
             {children}
-            {
-                hasError ? <Text className="error">{error}</Text>
-                    : <Text className="helper-text">{helperText}</Text>
-            }
+            <div className="additional-text">
+                {
+                    hasError ? <Text className="error">{error}</Text>
+                        : <Text className="helper-text">{helperText}</Text>
+                }
+            </div>
         </div>
     );
 }

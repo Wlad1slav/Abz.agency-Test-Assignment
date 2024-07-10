@@ -10,6 +10,15 @@
 
 .has-error .error, .helper-text {
   font-size: 12px;
-  padding-left: 12px;
+  //padding-left: 12px;
   text-align: left;
+}
+
+.field {
+  position: relative;
+  .additional-text {
+    position: absolute;
+    bottom: -24px;
+    left: 15px;
+  }
 }

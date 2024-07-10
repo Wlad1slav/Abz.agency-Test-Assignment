@@ -154,6 +154,7 @@ export interface InputTextProps {
     max?: number;
     min?: number;
     error?: string;
+    helperText?: string;
     onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 

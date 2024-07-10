@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import {Radio} from "@mui/material";
 import {RadioBoxProps, RadioButtonProps} from "@/types/props";
-import Heading from "@/components/General/Typography/Heading/Heading";
-import './RadioBox.scss';
 import Field from "@/components/Form/Field/Field";
+import Font from "@/components/General/Typography/Font/Font";
+import Text from "@/components/General/Typography/Text/Text";
+import './RadioBox.scss';
 
 export function RadioBoxValid(obj: any): obj is RadioBoxProps {
     return 'name' in obj && 'internalLabels' in obj && 'mainLabel' in obj;
@@ -48,7 +49,9 @@ function RadioBox({ name, internalLabels, mainLabel, onChangeStore, error }: Rad
     return (
         <Field error={error}>
             <div className="radio-box">
-                <Heading option="h3">{mainLabel}</Heading>
+                <Font weight="normal">
+                    <Text>{mainLabel}</Text>
+                </Font>
                 <div>
                     {
                         internalLabels.map((button) => {

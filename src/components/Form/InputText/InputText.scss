@@ -6,9 +6,10 @@
   input {
     padding: var(--input-text-padding);
     border-radius: var(--input-text-border-radius);
-    outline: var(--input-text-border-width) solid var(--input-text-background);
+    outline: var(--input-text-border-width) solid var(--input-text-border-color);
     border: none;
     width: 100%;
+    height: var(--input-text-height);
     min-width: var(--input-text-width);
     font-size: var(--font-size-base);
     font-family: var(--font-family-normal);

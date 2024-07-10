@@ -10,6 +10,7 @@ import RadioBox, {RadioBoxValid} from "@/components/Form/RadioBox/RadioBox";
 import Heading from "@/components/General/Typography/Heading/Heading";
 import Image from "@/components/General/Image/Image";
 import Text from "@/components/General/Typography/Text/Text";
+import Font from "@/components/General/Typography/Font/Font";
 import './FormPost.scss';
 
 function FormPost({requestUrl, fields, button, successMessage, successImg, heading}: FormPostProps) {
@@ -105,45 +106,53 @@ function FormPost({requestUrl, fields, button, successMessage, successImg, headi
             {
                 success ?
                     <div className="success">
-                        <Heading option="h2">{successMessage}</Heading>
+                        <Font weight="normal">
+                            <Heading option="h1">{successMessage}</Heading>
+                        </Font>
                         <Image type="normal" src={successImg} alt="success" />
                     </div>
                     :
-                    <form onSubmit={handleSubmit}>
-                        <Heading option="h2">{heading}</Heading>
-                        {
-                            fields.map(field => {
-                                // Takes an array of errors for a given name and join to a string
-                                const error = errors?.fails[field.name]?.join(' ');
+                    <div className="form">
+                        <Font weight="normal">
+                            <Heading option="h1">{heading}</Heading>
+                        </Font>
+                        <form onSubmit={handleSubmit}>
+                            {
+                                fields.map(field => {
+                                    // Takes an array of errors for a given name and join to a string
+                                    const error = errors?.fails[field.name]?.join(' ');
 
-                                // Returns a component whose props are equal to the array object's props
-                                if (InputTextValid(field))
-                                    return <InputText
-                                        key={field.name}
-                                        error={error}
-                                        onChange={handleChangeInputText}
-                                        {...field}
-                                    />
-                                else if (UploadValid(field))
-                                    return <Upload
-                                        key={field.name}
-                                        onInputStore={handleInputFile}
-                                        error={error}
-                                        {...field}
-                                    />
-                                else if (RadioBoxValid(field))
-                                    return <RadioBox
-                                        key={field.name}
-                                        error={error}
-                                        onChangeStore={handleChangeRadioBox(field.name)}
-                                        {...field}
-                                    />
-                            })
-                        }
-                        <Button type="submit"> {button} </Button>
+                                    // Returns a component whose props are equal to the array object's props
+                                    if (InputTextValid(field))
+                                        return <InputText
+                                            key={field.name}
+                                            error={error}
+                                            onChange={handleChangeInputText}
+                                            {...field}
+                                        />
+                                    else if (UploadValid(field))
+                                        return <Upload
+                                            key={field.name}
+                                            onInputStore={handleInputFile}
+                                            error={error}
+                                            {...field}
+                                        />
+                                    else if (RadioBoxValid(field))
+                                        return <RadioBox
+                                            key={field.name}
+                                            error={error}
+                                            onChangeStore={handleChangeRadioBox(field.name)}
+                                            {...field}
+                                        />
+                                })
+                            }
+                            <div className="submit">
+                                <Button type="submit"> {button} </Button>
+                            </div>
 
-                        <Text>{errors && errors['message']}</Text>
-                    </form>
+                            <Text>{errors && errors['message']}</Text>
+                        </form>
+                    </div>
             }
         </div>
     );

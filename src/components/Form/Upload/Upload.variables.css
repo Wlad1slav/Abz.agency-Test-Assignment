@@ -1,9 +1,10 @@
 :root {
     --upload-min-width: 328px; /* taken from figma */
-    --upload-padding: 10px 12px;
+    --upload-padding: 14px 14px;
     --upload-border-radius: 4px;
     --upload-border-width: 1px;
     --upload-button-border-color: var(--black-color);
+    --upload-border-color: #D0CFCF;
     --upload-placeholder-color: #7E7E7E;
 }
 
@@ -12,4 +13,5 @@
     --upload-border-width: 2px;
     --upload-placeholder-color: var(--red-color);
     --upload-button-border-color: var(--red-color);
+    --upload-border-color: var(--red-color);
 }

@@ -4,11 +4,14 @@
     --input-text-label-margin: 12px;
     --input-text-label-padding: 2px;
     --input-text-width: 328px;
+    --input-text-height: 54px;
     --input-text-background: #7E7E7E;
     --input-text-border-width: 1px;
+    --input-text-border-color: #D0CFCF;
 }
 
 .has-error {
     --input-text-background: var(--red-color);
+    --input-text-border-color: var(--red-color);
     --input-text-border-width: 2px;
 }
