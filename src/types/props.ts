@@ -78,6 +78,7 @@ export interface BackgroundImage {
     alt: string;
     position?: string;
     size?: string;
+    className?: string;
     children: React.ReactNode;
 }
 

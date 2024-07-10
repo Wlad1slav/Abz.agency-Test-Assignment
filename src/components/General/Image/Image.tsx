@@ -29,9 +29,10 @@ function Image(props: ImageProps) {
             );
 
         case 'background':
-            const { children, src, alt, position, size, ...rest } = props;
+            const { children, src, alt, position, size, className, ...rest } = props;
             return (
                 <div
+                    className={className}
                     style={{
                         backgroundImage: `url(${src})`,
                         backgroundPosition: position ?? 'center',
