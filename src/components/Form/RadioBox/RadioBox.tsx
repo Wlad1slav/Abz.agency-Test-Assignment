@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import {Radio} from "@mui/material";
 import {RadioBoxProps, RadioButtonProps} from "@/types/props";
 import Heading from "@/components/General/Typography/Heading/Heading";
 import './RadioBox.scss';
@@ -11,10 +12,17 @@ export function RadioBoxValid(obj: any): obj is RadioBoxProps {
 }
 
 function RadioButton({ label, value, checked, name, onChange }: RadioButtonProps) {
+    const color = {
+        color: '#D0CFCF',
+        '&.Mui-checked': {
+            color: '#00BDD3',
+        },
+    }
+
     return (
         <label>
-            <input
-                type="radio"
+            <Radio
+                sx={color}
                 checked={checked}
                 name={name}
                 onChange={() => onChange ? onChange(value ?? label) : () => {}}
@@ -46,7 +54,13 @@ function RadioBox({ name, internalLabels, mainLabel, onChangeStore, error }: Rad
                         internalLabels.map((button) => {
                             // If the value of the selected radio is equal to this value, it is checked
                             const checked = selectedValue === button.value;
-                            return <RadioButton {...button} checked={checked} onChange={handleRadioChange} />
+                            return <RadioButton
+                                key={button.value}
+                                {...button}
+                                name={name}
+                                checked={checked}
+                                onChange={handleRadioChange}
+                            />
                         })
                     }
                 </div>

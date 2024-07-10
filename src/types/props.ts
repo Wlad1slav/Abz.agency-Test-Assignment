@@ -171,7 +171,7 @@ export interface RadioButtonProps {
     label: string;
     value?: string;
     checked?: boolean;
-    name: string;
+    name?: string;
     onChange?: (label: string) => void;
 }
 
