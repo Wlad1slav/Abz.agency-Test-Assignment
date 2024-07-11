@@ -4,6 +4,10 @@
   position: relative;
   background-position: bottom!important;
 
+  @media only screen and (max-width: 768px) {
+    height: 500px;
+  }
+
   // Container with content in the head section of the page
   .centered {
     z-index: 2; // At a level higher than container darkening
@@ -23,6 +27,10 @@
       flex-direction: column;
       gap: 21px;
     }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   // Darkening the container
@@ -38,6 +46,7 @@
   }
 }
 
+// Element centralization
 .centered {
   position: absolute;
   left: 50%;
@@ -63,5 +72,23 @@
 
   .radio-box {
     margin-top: -7px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.get-request-section, .post-request-section form, .head-section .centered  {
+  padding-inline: var(--page-content-inline-padding);
+
+
+}
+
+.get-request-section, .post-request-section {
+  @media only screen and (max-width: 360px) {
+    h1 {
+      padding-inline: 30px;
+    }
   }
 }

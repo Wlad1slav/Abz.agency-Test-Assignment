@@ -1,4 +1,52 @@
 :root {
+    --card-width: 370px;
     --cards-space-between-elements: 29px;
     --card-padding: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    :root {
+        --card-width: 282px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    :root {
+        --card-width: 220px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --cards-space-between-elements: 16px;
+        --card-width: 344px;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    :root {
+        --cards-space-between-elements: 16px;
+        --card-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 675px) {
+    :root {
+        --cards-space-between-elements: 16px;
+        --card-width: 280px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    :root {
+        --cards-space-between-elements: 5px;
+        --card-width: 230px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    :root {
+        --cards-space-between-elements: 5px;
+        --card-width: 328px;
+    }
 }

@@ -10,6 +10,7 @@ header {
   z-index: 10;
   width: 100%;
   background-color: var(--header-background);
+  padding: var(--header-padding);
   div {
     display: flex;
     justify-content: space-between;

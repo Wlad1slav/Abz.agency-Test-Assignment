@@ -59,4 +59,29 @@
 :root {
     --page-width: 1170px;
     --page-space-between-sections: 140px;
+    --page-content-inline-padding: 0;
+}
+
+@media only screen and (max-width: 1200px)  {
+    :root {
+        --page-content-inline-padding: 45px;
+    }
+}
+
+@media only screen and (max-width: 1010px)  {
+    :root {
+        --page-content-inline-padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    :root {
+        --page-content-inline-padding: 0;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    :root {
+        --page-content-inline-padding: 20px;
+    }
 }
