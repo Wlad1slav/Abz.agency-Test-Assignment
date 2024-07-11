@@ -7,6 +7,7 @@ import {
     InputTextType,
     TextOptions
 } from "@/types/enums";
+import {UrlObject} from "url";
 
 /**
  * General/Typography/Font/Font.tsx
@@ -109,6 +110,7 @@ export interface ButtonProps {
     disabled?: boolean;
     onClick?: () => void;
     type?: ButtonOptions;
+    href?: string | UrlObject;
 }
 
 /**

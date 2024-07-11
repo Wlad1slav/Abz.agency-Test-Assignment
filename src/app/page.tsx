@@ -25,16 +25,16 @@ export default function HomePage() {
                                 What defines a good front-end developer is one that has skilled knowledge of HTML, CSS, JS with a vast understanding of User design thinking as they'll be building web interfaces with accessibility in mind. They should also be excited to learn, as the world of Front-End Development keeps evolving.
                             </Text>
                         </div>
-                        <Button>Sign up</Button>
+                        <Button href="#post">Sign up</Button>
                     </div>
                 </Font>
             </Image>
 
-            <div className="get-request-section">
+            <div className="get-request-section" id="get">
                 <CardsPagination />
             </div>
 
-            <div className="post-request-section">
+            <div className="post-request-section" id="post">
                 <FormPost
                     requestUrl="https://frontend-test-assignment-api.abz.agency/api/v1/users"
                     button="Sign up"

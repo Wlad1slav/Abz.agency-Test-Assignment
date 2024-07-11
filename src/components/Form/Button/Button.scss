@@ -64,3 +64,12 @@
     );
   }
 }
+
+// Link button styles
+a.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+}

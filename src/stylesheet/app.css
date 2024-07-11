@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box; /* element's overall width and height include padding and frame width */
     color: var(--black-color);
+    font-family: var(--font-family-normal);
 }
 
 html {
@@ -18,7 +19,6 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: var(--header-height) 0 0 0;
-    font-family: var(--font-family-normal);
     letter-spacing: var(--letter-spacing);
     background-color: var(--light-grey-color);
 }

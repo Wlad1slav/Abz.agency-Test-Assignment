@@ -8,8 +8,8 @@ function Header() {
             <div>
                 <Logo />
                 <nav className="buttons">
-                    <Button type="button">Users</Button>
-                    <Button type="button">Sign up</Button>
+                    <Button href="#get">Users</Button>
+                    <Button href="#post">Sign up</Button>
                 </nav>
             </div>
         </header>
