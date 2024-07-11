@@ -11,7 +11,7 @@ function Field({ children, error, helperText }: FieldProps) {
             {children}
             <div className="additional-text">
                 {
-                    hasError ? <Text className="error">{error}</Text>
+                    hasError ? <Text className="error" type="ellipsis">{error}</Text>
                         : <Text className="helper-text">{helperText}</Text>
                 }
             </div>
