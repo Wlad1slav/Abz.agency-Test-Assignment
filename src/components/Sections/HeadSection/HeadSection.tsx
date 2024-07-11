@@ -9,7 +9,7 @@ function HeadSection() {
     return (
         <Image
             type="background"
-            src="https://s3-alpha-sig.figma.com/img/4d58/d7f0/5205809f3a89f4261f915140e97786b8?Expires=1721606400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=i0MvJdq10Gb3iuoY97uu7fof7pWJ3JKBlyfw3Znc~~ONXCXhUPoZ383sdhls31Oaynn8~aCEIXxX7dCB2Bkr0BPAfv6g8inJEQg6IDo3ztKnjIzKKqj-YOjlwOINqv7ics~Lymi-24MybUjBWGFzFcKj3pQFFpF6BG9EnLvCE1OpDTFWNee-kr9l3OF3YT28d22dWwq6F9TEbELlAARxG7A42r-PLM7UYWQE5nBBFHSr9OSG97x693aUF7X3MXVsBUwp2gT-sd~eg61oyqHSPlMOI-PNQoJ6ZvWcmlRAMQhjJd8j2X4zlhOj3znZVUex8d8fJCbpPA8TBOhm69QB-w__"
+            src="/page-head-section.webp"
             alt=""
             className="head-section"
         >

@@ -5,11 +5,6 @@ import '@/stylesheet/app.variables.css';
 import '@/stylesheet/home.scss';
 import {Providers} from "@/redux/Provider";
 
-export const metadata: Metadata = {
-  title: "Abz.agency Test Assigment",
-  description: "Test assigment for the agency Abz, which was performed by Vladyslav Fokin.",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
