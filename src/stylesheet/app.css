@@ -21,6 +21,7 @@ body {
     margin: var(--header-height) 0 0 0;
     letter-spacing: var(--letter-spacing);
     background-color: var(--light-grey-color);
+    overflow-x: hidden;
 }
 
 div.content {

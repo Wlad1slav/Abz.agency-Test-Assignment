@@ -46,7 +46,7 @@
 
 @media only screen and (max-width: 360px) {
     :root {
-        --cards-space-between-elements: 5px;
-        --card-width: 328px;
+        --cards-space-between-elements: 20px;
+        --card-width: 100%;
     }
 }
