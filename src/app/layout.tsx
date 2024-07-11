@@ -3,6 +3,7 @@ import Header from "@/components/Header/Header";
 import '@/stylesheet/app.css';
 import '@/stylesheet/app.variables.css';
 import '@/stylesheet/home.scss';
+import {Providers} from "@/redux/Provider";
 
 export const metadata: Metadata = {
   title: "Abz.agency Test Assigment",
@@ -19,7 +20,9 @@ export default function RootLayout({
       <body>
         <div className="content">
           <Header />
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </div>
       </body>
     </html>

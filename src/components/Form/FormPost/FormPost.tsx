@@ -1,6 +1,8 @@
 'use client'
 
 import React, { ChangeEvent, useEffect, useState } from "react";
+import {useDispatch} from "react-redux";
+import {setComplete} from "@/redux/feateres/formSlice";
 import { FormPostProps } from "@/types/props";
 import axios from "axios";
 import Button from "@/components/Form/Button/Button";
@@ -11,8 +13,8 @@ import Heading from "@/components/General/Typography/Heading/Heading";
 import Image from "@/components/General/Image/Image";
 import Text from "@/components/General/Typography/Text/Text";
 import Font from "@/components/General/Typography/Font/Font";
-import './FormPost.scss';
 import Preloader from "@/components/General/Preloader/Preloader";
+import './FormPost.scss';
 
 function FormPost({ requestUrl, fields, button, successMessage, successImg, heading }: FormPostProps) {
 
@@ -26,6 +28,8 @@ function FormPost({ requestUrl, fields, button, successMessage, successImg, head
     const [success, setSuccess] = useState(false);
 
     const [loading, setLoading] = useState(false);
+
+    const dispatch = useDispatch();
 
     // The state in which all errors that may have occurred
     const [errors, setErrors] = useState<{
@@ -81,7 +85,10 @@ function FormPost({ requestUrl, fields, button, successMessage, successImg, head
             }
 
             await axios.post(requestUrl, formData, { headers: { 'Token': token } })
-                .then(() => setSuccess(true))
+                .then(() => {
+                    setSuccess(true);
+                    dispatch(setComplete(true));
+                })
                 .catch(e => setErrors({
                     message: e.response?.data?.message || e.message,
                     status: e.response?.status,
