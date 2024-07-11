@@ -1,0 +1,13 @@
+// Working with GET request
+.get-request-section {
+  width: 100%;
+  padding-inline: var(--page-content-inline-padding);
+  h1 {
+    text-align: center;
+  }
+  @media only screen and (max-width: 360px) {
+    h1 {
+      padding-inline: 30px;
+    }
+  }
+}

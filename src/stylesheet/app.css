@@ -39,3 +39,10 @@ main {
 a, a:hover, a:visited {
     text-decoration: none;
 }
+
+.centered {
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translateY(50%) translateX(-50%);
+}

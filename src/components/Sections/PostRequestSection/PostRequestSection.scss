@@ -1,0 +1,23 @@
+// Working with POST request
+.post-request-section {
+  display: flex;
+  justify-content: center;
+  padding-inline: var(--page-content-inline-padding);
+  form {
+    width: 380px;
+  }
+
+  .radio-box {
+    margin-top: -7px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 360px) {
+    h1 {
+      padding-inline: 30px;
+    }
+  }
+}
