@@ -23,7 +23,6 @@ function CardsPagination() {
     const [currentPage, setCurrentPage] = useState<number>(1);
 
     const formCompleted = useSelector((state: RootState) => state.form.formCompleted);
-    console.log(formCompleted);
 
     // Getting users from the server
     const getUsers = (customRequest?: string | undefined) => {

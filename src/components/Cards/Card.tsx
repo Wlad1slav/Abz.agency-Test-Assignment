@@ -12,6 +12,7 @@ function Card({name, photo, position, phone, email}: UserModel) {
                 width="70px"
                 height="70px"
                 src={photo}
+                fallbackSrc="/user.webp"
                 alt={name}
             />
             <div className="bio">

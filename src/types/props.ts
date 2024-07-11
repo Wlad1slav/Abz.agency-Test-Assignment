@@ -68,6 +68,7 @@ export interface ResponsiveImage {
 // A thumbnail image that you can adjust the height and width of
 export interface ThumbnailImage {
     src: string;
+    fallbackSrc?: string;
     alt: string;
     width?: number | string;
     height?: number | string;

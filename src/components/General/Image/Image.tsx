@@ -1,17 +1,22 @@
-import React from 'react';
+'use client'
+
+import React, {useState} from 'react';
 import {ImageProps} from "@/types/enums";
 
 
 function Image(props: ImageProps) {
+
+    const [imgSrc, setImgSrc] = useState(props.src);
+
     switch (props.type) {
 
         case 'normal':
-            return <img src={props.src} alt={props.alt} />;
+            return <img src={imgSrc} alt={props.alt} />;
 
         case 'responsive':
             return (
                 <img
-                    src={props.src}
+                    src={imgSrc}
                     alt={props.alt}
                     srcSet={props.srcSet}
                     sizes={props.sizes}
@@ -21,10 +26,11 @@ function Image(props: ImageProps) {
         case 'thumbnail':
             return (
                 <img
-                    src={props.src}
+                    src={imgSrc}
                     alt={props.alt}
                     width={props.width}
                     height={props.height}
+                    onError={() => setImgSrc(props.fallbackSrc ?? '/')}
                 />
             );
 
